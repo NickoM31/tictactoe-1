@@ -1,0 +1,29 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "Tictactoe game for tutorial purpose",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroinedor/tictactoe.git"
+  },
+  "author": "Pipo Bimbo",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/heroinedor/tictactoe/issues"
+  },
+  "homepage": "https://github.com/heroinedor/tictactoe#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
