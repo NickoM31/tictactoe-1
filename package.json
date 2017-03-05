@@ -4,7 +4,7 @@
   "description": "Tictactoe game for tutorial purpose",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,13 @@
   "homepage": "https://github.com/heroinedor/tictactoe#readme",
   "devDependencies": {
     "babel-core": "^6.22.1",
+    "babel-jest": "^19.0.0",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "jest": "^19.0.2",
+    "react-test-renderer": "^15.4.2",
     "webpack": "^1.14.0"
   },
   "dependencies": {
