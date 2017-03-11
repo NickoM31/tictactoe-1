@@ -1,18 +1,18 @@
-describe('angularjs homepage todo list', function() {
-    it('should add a todo', function() {
-        browser.get('https://angularjs.org');
+describe('TicTacToe game page', function() {
+    it('should play a successfull game for X', function() {
+        browser.ignoreSynchronization = true
+        browser.get('/');
 
-        element(by.model('todoList.todoText')).sendKeys('write first protractor test');
-        element(by.css('[value="add"]')).click();
-
-        var todoList = element.all(by.repeater('todo in todoList.todos'));
-        expect(todoList.count()).toEqual(3);
-        expect(todoList.get(2).getText()).toEqual('write first protractor test');
-
-        // You wrote your first test, cross it off the list
-        todoList.get(2).element(by.css('input')).click();
-        var completedAmount = element.all(by.css('.done-true'));
-        expect(completedAmount.count()).toEqual(2);
+        element(by.xpath('//*[@id="container"]/div/div[1]/div/div[2]/button[1]')).click();
+        element(by.xpath('//*[@id="container"]/div/div[1]/div/div[3]/button[2]')).click();
+        element(by.xpath('//*[@id="container"]/div/div[1]/div/div[4]/button[3]')).click();
+        element(by.xpath('//*[@id="container"]/div/div[1]/div/div[2]/button[3]')).click();
+        element(by.xpath('//*[@id="container"]/div/div[1]/div/div[4]/button[1]')).click();
+        element(by.xpath('//*[@id="container"]/div/div[1]/div/div[2]/button[2]')).click();
+        element(by.xpath('//*[@id="container"]/div/div[1]/div/div[4]/button[2]')).click();
+        
+        var TheWinnerIs = element(by.css('.status'));
+        expect(TheWinnerIs.getText()).toEqual('The winner is : X');
     });
 });
 
