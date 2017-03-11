@@ -1,15 +1,45 @@
 module.exports = {
-    entry: './src/app.js',
+    entry: {
+        app: ["./src/app.js", "./src/style.css", "./src/index.html"]
+    },
     output: {
         path: './bin',
         filename: 'app.bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
           {
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: "babel-loader"
+            use: [
+                {
+                    loader :"babel-loader"
+                }
+            ]
+          },
+          {
+            test: /\.css$/, 
+            use: [
+                {
+                    loader :"file-loader",
+                    options:{
+                    name: "[name].[ext]",
+                    emitFile: "true"
+                    }
+                }
+            ]
+          },
+          {
+            test: /\.html$/,
+            use: [
+                {
+                    loader :"file-loader",
+                    options:{
+                    name: "[name].[ext]",
+                    emitFile: "true"
+                    }
+                }
+            ]
           }
         ]
     }
