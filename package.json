@@ -1,17 +1,15 @@
 {
   "name": "tictactoe",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tictactoe game for tutorial purpose",
   "main": "webpack.config.js",
   "scripts": {
     "test": "jest",
-    "test:e2e": "jest && npm run e2e",
+    "ci": "jest && npm run e2e",
     "e2e": "npm-run-all -p -r webdriver:start webpack-dev-server protractor",
-    "postinstall": "npm run webdriver:update",
     "protractor": "sleep 4 && protractor src/e2e/protractor.conf.js",
     "webpack-dev-server": "webpack-dev-server",
-    "webdriver-manager": "webdriver-manager",
-    "webdriver:start": "npm run webdriver-manager start",
+    "webdriver:start": "webdriver-manager start",
     "webdriver:update": "webdriver-manager update"
   },
   "repository": {
