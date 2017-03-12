@@ -1,20 +1,18 @@
 sudo: required
 dist: trusty
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+  firefox: "latest"
 language: node_js
 node_js:
   - "6"
 before_install:
 - "export DISPLAY=:99.0"
-- "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+- sh -e /etc/init.d/xvfb start
 - sleep 3
 install:
   - npm install
+before_script:
   - npm run webdriver:update
+  - sleep 10
 script:
   - npm run ci
