@@ -4,8 +4,8 @@
   "description": "Tictactoe game for tutorial purpose",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest",
-    "test:e2e": "jest && npm run e2e",
+    "test:unit": "jest",
+    "test": "jest && npm run e2e",
     "e2e": "npm-run-all -p -r webdriver:start webpack-dev-server protractor",
     "postinstall": "npm run webdriver:update",
     "protractor": "sleep 4 && protractor src/e2e/protractor.conf.js",
