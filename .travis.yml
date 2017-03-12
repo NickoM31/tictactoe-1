@@ -15,5 +15,6 @@ beforescript:
 - sleep 3
 install:
   - npm install
+  - npm run webdriver:update
 script:
   - npm run ci
